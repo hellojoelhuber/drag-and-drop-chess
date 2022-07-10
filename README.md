@@ -7,7 +7,7 @@ This project was created as a samplie implementation of [SwiftUI Drag-and-Drop](
 
 # Overview.
 
-The Chess project is a barebones chess implementation. It features only the most basic movement rules, no checking, no castling, no _en passant_. The chess board is modeling following [the discussion in this post]({% post_url 2022-05-16-modeling-the-chess-board %}).
+The Chess project is a barebones chess implementation. It features only the most basic movement rules, no checking, no castling, no _en passant_. The chess board is modeling following [the discussion in this post](https://www.joelhuber.com/2022/05/16/modeling-the-chess-board.html).
 
 For the drag-and-drop library:
 * Each chess board square is a `DropReceiver`, organized in an array.
