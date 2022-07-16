@@ -6,16 +6,17 @@ struct SquareView: View {
     @EnvironmentObject var model: ChessViewModel
     
     let square: ChessBoardSquare
-    let width: Double = 35
     
     var body: some View {
         ZStack {
             Rectangle()
                 .checkered(id: square.id, color: .gray)
+                .overlay(Color.green.opacity(square.legalDropTarget == .accepted ? 0.3 : 0))
                 .dropReceiver(for: model.chessBoard[square.id],
                               model: model)
             Rectangle()
-                .strokeBorder(Color.green, lineWidth: 4).opacity(square.legalDropTarget == .accepted ? 1 : 0)
+                .strokeBorder(Color.green, lineWidth: 4)
+                .opacity(square.legalDropTarget == .accepted ? 1 : 0)
             switch square.piece {
             case .none:
                 EmptyView()
@@ -26,7 +27,7 @@ struct SquareView: View {
                               onDropped: onDropPiece)
             }
         }
-        .frame(width: width, height: width)
+        .scaledToFit()
     }
     
     func onDragPiece(piece: Dragable, position: CGPoint) -> DragState {

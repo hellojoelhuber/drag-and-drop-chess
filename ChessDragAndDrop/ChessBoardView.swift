@@ -7,9 +7,9 @@ struct ChessBoardView: View {
     private let rows = 8
     
     var body: some View {
-        VStack {
+        VStack(spacing:0) {
             ForEach(0..<8) { row in
-                HStack {
+                HStack(spacing:0) {
                     ForEach(model.getRowOfSquares(rowNumber: row), id:\.id) { square in
                         SquareView(square: square)
                             .zIndex(model.pieceDidMoveFrom == square.id ? 1 : 0)
@@ -18,6 +18,7 @@ struct ChessBoardView: View {
                 .zIndex(model.getRowOfSquares(rowNumber: row).contains(where: { $0.id == model.pieceDidMoveFrom }) ? 1 : 0)
             }
         }
+        .padding()
     }
 }
 
