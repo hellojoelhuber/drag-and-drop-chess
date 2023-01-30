@@ -1,13 +1,13 @@
 # Chess
 
-This project was created as a samplie implementation of [SwiftUI Drag-and-Drop](https://github.com/hellojoelhuber/swiftui-drag-and-drop) library. This README is a mirror of my [personal website](https://www.joelhuber.com/software-documentation/documentation-chess-drag-and-drop/).
+This project was created as a samplie implementation of [SwiftUI Drag-and-Drop](https://github.com/hellojoelhuber/swiftui-drag-and-drop) library. This README is a mirror of my [personal website](https://www.joelhuber.com/documentation/documentation-chess-drag-and-drop).
 
 
 ![Chess Drag-And-Drop Demo](https://github.com/hellojoelhuber/swiftui-drag-and-drop/blob/main/assets/media/documentation-dragdrop-chess-demo.gif)
 
 # Overview.
 
-The Chess project is a barebones chess implementation. It features only the most basic movement rules, no checking, no castling, no _en passant_. The chess board is modeled following [the discussion in this post](https://www.joelhuber.com/2022/05/16/modeling-the-chess-board.html).
+The Chess project is a barebones chess implementation. It features only the most basic movement rules, no checking, no castling, no _en passant_. The chess board is modeled following [the discussion in this post](https://www.joelhuber.com/posts/2022-05-16-modeling-the-chess-board).
 
 For the drag-and-drop library:
 * Each chess board square is a `DropReceiver`, organized in an array.
